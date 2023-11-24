@@ -1,0 +1,19 @@
+[package]
+name = "stm32test"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+cortex-m = "0.7"
+# cortex-m-rt = {version = "0.7", features = ["device"]}
+cortex-m-rtic = "1"
+defmt = "0.3"
+defmt-rtt = "0.4"
+embedded-hal = "0.2"
+# nb = "1"
+panic-halt = "0.2"
+panic-probe = "0.3"
+# rtic = { version = "2", features = ["thumbv7-backend", "cortex-m"] }
+# rtic-monotonics = {version = "1", features = ["cortex-m-systick"]}
+stm32f4xx-hal = {version = "0.18", features = ["stm32f469", "defmt", "rt", "rtic"]}
+systick-monotonic = "1"

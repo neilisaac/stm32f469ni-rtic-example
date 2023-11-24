@@ -1,0 +1,17 @@
+# [target.thumbv7em-none-eabihf]
+# [target.'cfg(all(target_arch = "arm", target_os = "none"))']
+# runner = "probe-rs run --chip STM32F469NIHx"
+
+# https://github.com/stm32-rs/stm32f4xx-hal/blob/master/.cargo/config.toml
+[target.thumbv7em-none-eabihf]
+runner = 'probe-rs run --chip STM32F469NIHx'
+rustflags = [
+  "-Clink-arg=-Tlink.x",
+  "-Clink-arg=-Tdefmt.x",
+]
+
+[build]
+target = "thumbv7em-none-eabihf"
+
+[env]
+DEFMT_LOG = "info"

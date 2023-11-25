@@ -54,14 +54,6 @@ mod app {
         (shared, local, monotonics)
     }
 
-    #[idle]
-    fn idle(_ctx: idle::Context) -> ! {
-        defmt::info!("idle!");
-        loop {
-            cortex_m::asm::nop();
-        }
-    }
-
     #[task(local = [led])]
     fn blink(ctx: blink::Context) {
         ctx.local.led.set_state(!ctx.local.led.get_state());

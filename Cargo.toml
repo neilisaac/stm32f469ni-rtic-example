@@ -9,6 +9,7 @@ cortex-m-rtic = "1"
 defmt = "0.3"
 defmt-rtt = "0.4"
 embedded-hal = "0.2"
+inverted-pin = "0.2.0"
 panic-probe = "0.3"
 stm32f4xx-hal = {version = "0.18", features = ["stm32f469", "defmt", "rt", "rtic"]}
 systick-monotonic = "1"

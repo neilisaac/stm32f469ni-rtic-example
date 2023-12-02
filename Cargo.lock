@@ -294,6 +294,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "inverted-pin"
+version = "0.2.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "696ca6da747130f217d96a91540c258fd77d6b2675cd550dc8fd042ddf864ff6"
+dependencies = [
+ "embedded-hal 0.2.7",
+]
+
+[[package]]
 name = "lock_api"
 version = "0.4.11"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -517,6 +526,7 @@ dependencies = [
  "defmt",
  "defmt-rtt",
  "embedded-hal 0.2.7",
+ "inverted-pin",
  "panic-probe",
  "stm32f4xx-hal",
  "systick-monotonic",
